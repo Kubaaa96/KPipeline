@@ -2,8 +2,8 @@ name: Windows
 on: [ push, pull_request ]
 
 env:
-  REPO: template-cpp
-  GITHUB_REPO: Kubaaa96/template-cpp
+  REPO: kpipeline
+  GITHUB_REPO: Kubaaa96/kpipeline
 
 jobs:
   windows:

@@ -1,4 +1,4 @@
-FROM cpp_template:0.0.1
+FROM kpipeline:0.0.1
 
 RUN apt-get update && \
     apt-get install -y ssh rsync gdb nano python3-pip clang-format clang-tidy ccache cppcheck

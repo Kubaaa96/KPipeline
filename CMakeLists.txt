@@ -20,7 +20,7 @@ run_conan(
         INSTALL_ARGS --build=missing
 )
 
-project(cpp-template VERSION 0.0.5 DESCRIPTION "Basic template project for C++ language" LANGUAGES CXX C)
+project(kpipeline VERSION 0.0.1 DESCRIPTION "Basic Library for extending pipeline operations in cpp" LANGUAGES CXX C)
 
 set(CMAKE_CXX_STANDARD 23)
 
@@ -28,7 +28,7 @@ set(ENABLE_CLANG_TIDY "ENABLE_CLANG_TIDY")
 set(ENABLE_CPPCHECK "ENABLE_CPPCHECK")
 
 project_options(
-        PREFIX "cpptemplate"
+        PREFIX "kpipeline"
         ENABLE_CACHE
         ${ENABLE_CPPCHECK}
         ${ENABLE_CLANG_TIDY}
@@ -38,7 +38,7 @@ project_options(
 add_executable(${PROJECT_NAME} src/Example.cpp src/main.cpp)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(${PROJECT_NAME}
-        PRIVATE cpptemplate_project_options cpptemplate_project_warnings
+        PRIVATE kpipeline_project_options kpipeline_project_warnings
 )
 
 target_find_dependencies(${PROJECT_NAME}
